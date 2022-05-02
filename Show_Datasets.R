@@ -8,7 +8,14 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session){
-  
+  output$summary <- renderPrint({
+    dataset <- get(input$dataset, "package:dslabs") 
+    summary(dataset)
+  })
+  output$table <- renderTable({
+    dataset <-get(input$dataset, "package:dslabs")
+    dataset
+  }) 
 }
 
 shinyApp(ui, server)
