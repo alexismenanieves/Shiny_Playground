@@ -9,6 +9,8 @@ ui <- fluidPage(
 
 server <- function(input, output, server)({
   dataset <- reactive(
+    # Use a reactive expression by calling it like a function
+    # This means, a reactive expression is called like a function
     get(input$dataset, "package:dslabs")
   )
   
