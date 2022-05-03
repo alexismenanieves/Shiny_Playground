@@ -8,6 +8,7 @@ library(shiny)
 ui <- fluidPage(
   numericInput("age", "How old are you?", value = NA),
   textInput("name", "What's your name?"),
+  # Whenever you are stuck, call the namespace shiny:: 
   textOutput("greeting"),
   plotOutput("histogram")
 )
