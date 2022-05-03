@@ -25,6 +25,3 @@ server <- function(input, output, server)({
 })
 
 shinyApp(ui, server)
-
-
-
